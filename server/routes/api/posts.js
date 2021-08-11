@@ -38,7 +38,7 @@ router.post('/', async (req, res) => {
 router.delete("/:id", async(req, res)=> {
 	await loadPostsCollection(function(dbCollection){
 		 
-		 dbCollection.deleteOne({_id: new mongodb.ObjectID(req.params.id)});
+		 dbCollection.deleteOne({_id: new mongodb.ObjectId(req.params.id)});
 		
 	});
 
